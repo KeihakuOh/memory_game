@@ -17,7 +17,6 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
 
-  // Shuffle cards
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
@@ -55,7 +54,6 @@ function App() {
     }
   }, [choiceOne, choiceTwo]);
 
-  // Reset choices & increase turn
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
@@ -63,7 +61,6 @@ function App() {
     setDisabled(false);
   };
 
-  // Start a new game automatically
   useEffect(() => {
     shuffleCards();
   }, []);
