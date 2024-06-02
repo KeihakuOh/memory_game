@@ -36,6 +36,5 @@ function multiply(a, b) {
   return a * b;
 }
 アロー関数
-コードをコピーする
 const multiply = (a, b) => a * b;
-
+const c = multiply(2, 3)　//6
