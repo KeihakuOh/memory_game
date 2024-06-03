@@ -16,6 +16,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [gameCompleted, setGameCompleted] = useState(false);
 
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -26,6 +27,7 @@ function App() {
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
+    setGameCompleted(false);
   };
 
   // Handle a choice
@@ -54,6 +56,12 @@ function App() {
     }
   }, [choiceOne, choiceTwo]);
 
+  useEffect(() => {
+    if (cards.length && cards.every(card => card.matched)) {
+      setGameCompleted(true);
+    }
+  }, [cards]);
+
   const resetTurn = () => {
     setChoiceOne(null);
     setChoiceTwo(null);
@@ -81,6 +89,7 @@ function App() {
         ))}
       </div>
       <p>Turns: {turns}</p>
+      {gameCompleted && <div className="completed-message">Completed!</div>}
     </div>
   );
 }

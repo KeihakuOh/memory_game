@@ -43,3 +43,16 @@
 .card .front {
   transform: rotateY(180deg);
 }
+
+.completed-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: green;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
