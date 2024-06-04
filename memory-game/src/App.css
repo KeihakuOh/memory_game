@@ -56,3 +56,10 @@
   border-radius: 10px;
   z-index: 1000;
 }
+
+.turns-counter {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+}

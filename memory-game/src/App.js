@@ -30,12 +30,10 @@ function App() {
     setGameCompleted(false);
   };
 
-  // Handle a choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
 
-  // Compare two selected cards
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true);
@@ -88,7 +86,7 @@ function App() {
           />
         ))}
       </div>
-      <p>Turns: {turns}</p>
+      <p className="turns-counter">Counts: {turns}</p>
       {gameCompleted && <div className="completed-message">Completed!</div>}
     </div>
   );
