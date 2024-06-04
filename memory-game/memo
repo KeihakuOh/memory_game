@@ -38,3 +38,9 @@ function multiply(a, b) {
 アロー関数
 const multiply = (a, b) => a * b;
 const c = multiply(2, 3)　//6
+
+numbers.sort(() => Math.random() - 0.5);
+Array.prototype.sort()メソッドは、比較関数を引数として取るメソッド　ここで渡した比較関数は() => Math.random() - 0.5
+const numbers = [1, 2, 3, 4, 5];
+numbers.sort((a, b) => b - a);
+console.log(numbers); // [5, 4, 3, 2, 1]
