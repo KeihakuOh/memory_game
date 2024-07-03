@@ -44,3 +44,5 @@ Array.prototype.sort()メソッドは、比較関数を引数として取るメ�
 const numbers = [1, 2, 3, 4, 5];
 numbers.sort((a, b) => b - a);
 console.log(numbers); // [5, 4, 3, 2, 1]
+
+<TextField> コンポーネントの value プロパティは、現在選択されている値を表し、入力フィールドに表示される
