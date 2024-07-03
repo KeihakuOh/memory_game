@@ -48,3 +48,5 @@ console.log(numbers); // [5, 4, 3, 2, 1]
 <TextField> コンポーネントの value プロパティは、現在選択されている値を表し、入力フィールドに表示される
 
 idとclassの機能はほぼ変わらない、idは単体、classは複数を指定する感じ
+
+javascriptは一行ずつコンパイルしないから、非同期処理。が、promiseなどthenによって順番で処理することもできる
